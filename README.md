@@ -15,7 +15,7 @@ The first line has two Integer: N and K.
 
 Then there are K lines of information, and every line has 3 Integers, representing for "the type of information" "x" "y".
 ### Example 1
-#### Input 1
+#### Input
 100 7
 
 1 101 1
@@ -31,7 +31,7 @@ Then there are K lines of information, and every line has 3 Integers, representi
 2 3 1
 
 1 5 5
-#### Output 1
+#### Output
 3
 #### Note
 Information 1, 4, 5 are wrong.

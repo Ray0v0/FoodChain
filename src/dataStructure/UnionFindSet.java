@@ -4,11 +4,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class UnionFindSet {
+    int size = 0;
     ArrayList<Integer> par = new ArrayList<>();
     HashMap<Integer, Integer> rank = new HashMap<>();
     public void init(int n) {
+        this.size = n;
         for (int i = 0; i < n; i++){
-            par.set(i, i);
+            par.add(i);
             rank.put(i, i);
         }
     }
@@ -36,5 +38,21 @@ public class UnionFindSet {
                 rank.put(x, rankTemp+1);
             }
         }
+    }
+    public void print() {
+        System.out.println("This is the begin of print.");
+        for (int i = 0; i < size; i++) {
+            System.out.printf("Element %d\t is with element %d\t\n", i, find(i));
+        }
+        System.out.println("This is the end of print.");
+    }
+    public static void main(String[] args) {
+        UnionFindSet s = new UnionFindSet();
+        s.init(5);
+        s.print();
+        s.unite(1, 3);
+        s.unite(2, 3);
+        s.print();
+
     }
 }

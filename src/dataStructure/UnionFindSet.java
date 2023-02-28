@@ -63,7 +63,7 @@ public class UnionFindSet {
         return find(x) == find(y);
     }
 
-    
+
     public static void main(String[] args) {
         UnionFindSet s = new UnionFindSet();
         s.init(5);
